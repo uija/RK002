@@ -1,6 +1,6 @@
 #include <RK002.h>
 
-#define MAXCHANNEL 9
+#define MAXCHANNEL 11
  
 RK002_DECLARE_INFO("Channel Ignorer","jkirchheimer@gmail.com ","1.0","ccd6aa34-84a8-484b-bfec-5987c3cf36dc")
 

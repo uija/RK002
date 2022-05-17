@@ -2,6 +2,8 @@
 
 #define DEFAULT_CHANNEL 1
 #define DEFAULT_NOTE 48
+#define NUMBER_OF_NOTES 12
+#define NUMBER_OF_CCS 12
 
 //RK002_DECLARE_INFO("Circuit Rhythm Channel Splitter","jkirchheimer@gmail.com","1.0","bf8bf7f7-3a8d-44d4-b2ca-f124faae1bda")
 RK002_DECLARE_PARAM(CHANNEL,1,1,16,DEFAULT_CHANNEL)
@@ -68,20 +70,34 @@ boolean RK002_onNoteOff( byte channel, byte key, byte velocity) {
   if( channel != listening_channel) {
     return false;
   }
-  while( key >= 8) {
-    key -= 8;
-  }
-  RK002_sendNoteOff( key, note, velocity); 
+  byte noteOffset = 0;
+  byte ch = 0;
+  for( uint8_t i = 0; i < 8; ++i) {
+    byte t = ((i+1) * NUMBER_OF_NOTES);
+    if( key < t) {
+      noteOffset = key - i*NUMBER_OF_NOTES;
+      ch = i;
+      break;
+    }
+  }  
+  RK002_sendNoteOff( ch, note+noteOffset , velocity); 
   return false;
 }
 boolean RK002_onNoteOn(byte channel, byte key, byte velocity) {
   if( channel != listening_channel) {
     return false;
   }
-  while( key >= 8) {
-    key -= 8;
-  }
-  RK002_sendNoteOn( key, note, velocity); 
+  byte noteOffset = 0;
+  byte ch = 0;
+  for( uint8_t i = 0; i < 8; ++i) {
+    byte t = ((i+1) * NUMBER_OF_NOTES);
+    if( key < t) {
+      noteOffset = key - i*NUMBER_OF_NOTES;
+      ch = i;
+      break;
+    }
+  }  
+  RK002_sendNoteOn( ch, note+noteOffset , velocity); 
   return false;
 }
 boolean RK002_onControlChange( byte channel, byte nr, byte value) {
@@ -92,7 +108,8 @@ boolean RK002_onControlChange( byte channel, byte nr, byte value) {
   byte cc = 127;
   byte ch = 0;
   for( uint8_t i = 0; i < 8; ++i) {
-    if( nr < (i+1 * number_of_ccs + 1)) {
+    byte t = ((i+1) * number_of_ccs + 1);
+    if( nr < t) {
       cc = nr - i*number_of_ccs;
       ch = i;
       break;

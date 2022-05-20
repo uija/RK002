@@ -1,0 +1,14 @@
+| 1		| 2		| 3		| 4		| 5		| 6		| 7		| 8|
+
+| 01 Sample 	| 13 Sample 	| 25 Sample 	| 37 Sample 	| 49 Sample 	| 61 Sample 	| 73 Sample 	| 85 Sample 	|
+| 02 Pitch 	| 14 Pitch 	| 26 Pitch 	| 38 Pitch 	| 50 Pitch 	| 62 Pitch 	| 74 Pitch 	| 86 Pitch 	|
+| 03 Slices 	| 15 Slices 	| 27 Slices 	| 39 Slices 	| 51 Slices 	| 63 Slices 	| 75 Slices 	| 87 Slices 	|
+| 04 Slice# 	| 16 Slice# 	| 28 Slice# 	| 40 Slice# 	| 52 Slice# 	| 64 Slice# 	| 76 Slice# 	| 88 Slice# 	|
+| 05 Slope 	| 17 Slope 	| 29 Slope 	| 41 Slope 	| 53 Slope 	| 65 Slope 	| 77 Slope 	| 89 Slope 	|
+| 06 Distr 	| 18 Distr 	| 30 Distr 	| 42 Distr 	| 54 Distr 	| 66 Distr 	| 78 Distr 	| 90 Distr 	|
+| 07 HPF 	| 19 HPF 	| 31 HPF 	| 43 HPF 	| 55 HPF 	| 67 HPF 	| 79 HPF 	| 91 HPF 	|
+| 08 LPF 	| 20 LPF 	| 32 LPF 	| 44 LPF 	| 56 LPF 	| 68 LPF 	| 80 LPF 	| 92 LPF 	|
+| 09 Level 	| 21 Level 	| 33 Level 	| 45 Level 	| 57 Level 	| 69 Level 	| 81 Level 	| 93 Level 	|
+| 10 Pan 	| 22 Pan 	| 34 Pan 	| 46 Pan 	| 58 Pan 	| 70 Pan 	| 82 Pan 	| 94 Pan 	|
+| 11 Reverb 	| 23 Reverb 	| 35 Reverb 	| 47 Reverb 	| 59 Reverb 	| 71 Reverb 	| 83 Reverb 	| 95 Reverb 	|
+| 12 Delay 	| 24 Delay 	| 36 Delay 	| 48 Delay 	| 60 Delay 	| 72 Delay 	| 84 Delay 	| 96 Delay 	|

@@ -24,7 +24,7 @@ boolean RK002_onNoteOn(byte channel, byte key, byte velocity) {
     RK002_sendProgramChange( channel, velocity-1);
     return false;
   } else if( key == bank_select_note) {   // handle bank select
-    RK002_sendControlChange( channel, bank_select_cc, velocity);
+    RK002_sendControlChange( channel, bank_select_cc, velocity-1);
     return false;
   } else if( key == cc_note) {            // set CC number
     current_target_cc[0] = velocity;
